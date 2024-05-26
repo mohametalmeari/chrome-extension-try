@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "My Extension",
+  "version": "1.0.0",
+
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/16.png",
+    "48": "icons/16.png",
+    "128": "icons/16.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {},
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"]
+}
