@@ -28,6 +28,15 @@ const changeBodyColor = async () => {
 
         counter++;
         console.log("Counter: ", counter);
+
+        let savedCounter = localStorage.getItem("counter") || 0;
+        localStorage.setItem("counter", ++savedCounter);
+        console.log("Saved Counter: ", savedCounter);
+
+        let sessionCounter = sessionStorage.getItem("counter") || 0;
+        sessionStorage.setItem("counter", ++sessionCounter);
+        console.log("Session Counter: ", sessionCounter);
+
         return { color, counter };
       },
     },
