@@ -28,13 +28,13 @@ const changeBodyColor = async () => {
 
         counter++;
         console.log("Counter: ", counter);
-        return { color, newCounter: counter };
+        return { color, counter };
       },
     },
     ([{ result }]) => {
       // Runs inside the POPUP
-      const { color, newCounter } = result;
-      counter = newCounter; // Updating already defined variable
+      const { color } = result; // Pass new variable
+      counter = result.counter; // Updating already defined variable
 
       document.getElementById("colorEl").innerHTML = color;
       document.getElementById("counterEl").innerHTML = counter;
